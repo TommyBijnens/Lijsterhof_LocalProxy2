@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CVLoggerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BS_H">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="TempCounter" Type="int" />
+          <Property Name="Counter" Type="int" />
+        </EntityType>
+        <EntityType Name="BS_M">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="TempCounter" Type="int" />
+          <Property Name="Counter" Type="int" />
+        </EntityType>
+        <EntityType Name="BS_TOT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="TempCounter" Type="int" />
+          <Property Name="Counter" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CVLogger.dbo.Parameters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Parameters">
+          <Key>
+            <PropertyRef Name="key" />
+          </Key>
+          <Property Name="key" Type="nchar" MaxLength="15" Nullable="false" />
+          <Property Name="value" Type="real" />
+        </EntityType>
+        <EntityType Name="T_H">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="TempCounter" Type="int" />
+          <Property Name="Counter" Type="int" />
+        </EntityType>
+        <EntityType Name="T_M">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="TempCounter" Type="int" />
+          <Property Name="Counter" Type="int" />
+        </EntityType>
+        <EntityType Name="T_TOT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="TempCounter" Type="int" />
+          <Property Name="Counter" Type="int" />
+        </EntityType>
+        <EntityType Name="Temp_Tommy_Keuken">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="Value" Type="int" />
+        </EntityType>
+        <EntityType Name="Temp1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="Value" Type="int" />
+        </EntityType>
+        <EntityType Name="Temp2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="Value" Type="int" />
+        </EntityType>
+        <EntityType Name="Temp3">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="Value" Type="int" />
+        </EntityType>
+        <EntityType Name="TempB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="Value" Type="int" />
+        </EntityType>
+        <EntityContainer Name="CVLoggerModelStoreContainer">
+          <EntitySet Name="BS_H" EntityType="Self.BS_H" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BS_M" EntityType="Self.BS_M" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BS_TOT" EntityType="Self.BS_TOT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_H" EntityType="Self.T_H" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_M" EntityType="Self.T_M" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_TOT" EntityType="Self.T_TOT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Temp_Tommy_Keuken" EntityType="Self.Temp_Tommy_Keuken" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Temp1" EntityType="Self.Temp1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Temp2" EntityType="Self.Temp2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Temp3" EntityType="Self.Temp3" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TempB" EntityType="Self.TempB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Parameters" EntityType="Self.Parameters" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Parameters].[key] AS [key], 
+    [Parameters].[value] AS [value]
+    FROM [dbo].[Parameters] AS [Parameters]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CVLoggerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BS_H">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="TempCounter" Type="Int32" />
+          <Property Name="Counter" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BS_M">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="TempCounter" Type="Int32" />
+          <Property Name="Counter" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BS_TOT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="TempCounter" Type="Int32" />
+          <Property Name="Counter" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_H">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="TempCounter" Type="Int32" />
+          <Property Name="Counter" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_M">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="TempCounter" Type="Int32" />
+          <Property Name="Counter" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_TOT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="TempCounter" Type="Int32" />
+          <Property Name="Counter" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Temp_Tommy_Keuken">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Value" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Temp1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Value" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Temp2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Value" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Temp3">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Value" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TempB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Value" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Parameters">
+          <Key>
+            <PropertyRef Name="key" />
+          </Key>
+          <Property Name="key" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="value" Type="Single" />
+        </EntityType>
+        <EntityContainer Name="CVLoggerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BS_H" EntityType="Self.BS_H" />
+          <EntitySet Name="BS_M" EntityType="Self.BS_M" />
+          <EntitySet Name="BS_TOT" EntityType="Self.BS_TOT" />
+          <EntitySet Name="T_H" EntityType="Self.T_H" />
+          <EntitySet Name="T_M" EntityType="Self.T_M" />
+          <EntitySet Name="T_TOT" EntityType="Self.T_TOT" />
+          <EntitySet Name="Temp_Tommy_Keuken" EntityType="Self.Temp_Tommy_Keuken" />
+          <EntitySet Name="Temp1" EntityType="Self.Temp1" />
+          <EntitySet Name="Temp2" EntityType="Self.Temp2" />
+          <EntitySet Name="Temp3" EntityType="Self.Temp3" />
+          <EntitySet Name="TempB" EntityType="Self.TempB" />
+          <EntitySet Name="Parameters" EntityType="Self.Parameters" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CVLoggerModelStoreContainer" CdmEntityContainer="CVLoggerEntities">
+          <EntitySetMapping Name="BS_H">
+            <EntityTypeMapping TypeName="CVLoggerModel.BS_H">
+              <MappingFragment StoreEntitySet="BS_H">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+                <ScalarProperty Name="Counter" ColumnName="Counter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BS_M">
+            <EntityTypeMapping TypeName="CVLoggerModel.BS_M">
+              <MappingFragment StoreEntitySet="BS_M">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+                <ScalarProperty Name="Counter" ColumnName="Counter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BS_TOT">
+            <EntityTypeMapping TypeName="CVLoggerModel.BS_TOT">
+              <MappingFragment StoreEntitySet="BS_TOT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+                <ScalarProperty Name="Counter" ColumnName="Counter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_H">
+            <EntityTypeMapping TypeName="CVLoggerModel.T_H">
+              <MappingFragment StoreEntitySet="T_H">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+                <ScalarProperty Name="Counter" ColumnName="Counter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_M">
+            <EntityTypeMapping TypeName="CVLoggerModel.T_M">
+              <MappingFragment StoreEntitySet="T_M">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+                <ScalarProperty Name="Counter" ColumnName="Counter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_TOT">
+            <EntityTypeMapping TypeName="CVLoggerModel.T_TOT">
+              <MappingFragment StoreEntitySet="T_TOT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+                <ScalarProperty Name="Counter" ColumnName="Counter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Temp_Tommy_Keuken">
+            <EntityTypeMapping TypeName="CVLoggerModel.Temp_Tommy_Keuken">
+              <MappingFragment StoreEntitySet="Temp_Tommy_Keuken">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Temp1">
+            <EntityTypeMapping TypeName="CVLoggerModel.Temp1">
+              <MappingFragment StoreEntitySet="Temp1">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Temp2">
+            <EntityTypeMapping TypeName="CVLoggerModel.Temp2">
+              <MappingFragment StoreEntitySet="Temp2">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Temp3">
+            <EntityTypeMapping TypeName="CVLoggerModel.Temp3">
+              <MappingFragment StoreEntitySet="Temp3">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TempB">
+            <EntityTypeMapping TypeName="CVLoggerModel.TempB">
+              <MappingFragment StoreEntitySet="TempB">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parameters">
+            <EntityTypeMapping TypeName="CVLoggerModel.Parameters">
+              <MappingFragment StoreEntitySet="Parameters">
+                <ScalarProperty Name="key" ColumnName="key" />
+                <ScalarProperty Name="value" ColumnName="value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

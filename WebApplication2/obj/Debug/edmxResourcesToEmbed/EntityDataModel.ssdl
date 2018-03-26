@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CVLoggerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BS_H">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="TempCounter" Type="int" />
+    <Property Name="Counter" Type="int" />
+  </EntityType>
+  <EntityType Name="BS_M">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="TempCounter" Type="int" />
+    <Property Name="Counter" Type="int" />
+  </EntityType>
+  <EntityType Name="BS_TOT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="TempCounter" Type="int" />
+    <Property Name="Counter" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CVLogger.dbo.Parameters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Parameters">
+    <Key>
+      <PropertyRef Name="key" />
+    </Key>
+    <Property Name="key" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="value" Type="real" />
+  </EntityType>
+  <EntityType Name="T_H">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="TempCounter" Type="int" />
+    <Property Name="Counter" Type="int" />
+  </EntityType>
+  <EntityType Name="T_M">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="TempCounter" Type="int" />
+    <Property Name="Counter" Type="int" />
+  </EntityType>
+  <EntityType Name="T_TOT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="TempCounter" Type="int" />
+    <Property Name="Counter" Type="int" />
+  </EntityType>
+  <EntityType Name="Temp_Tommy_Keuken">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Value" Type="int" />
+  </EntityType>
+  <EntityType Name="Temp1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Value" Type="int" />
+  </EntityType>
+  <EntityType Name="Temp2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Value" Type="int" />
+  </EntityType>
+  <EntityType Name="Temp3">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Value" Type="int" />
+  </EntityType>
+  <EntityType Name="TempB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Value" Type="int" />
+  </EntityType>
+  <EntityContainer Name="CVLoggerModelStoreContainer">
+    <EntitySet Name="BS_H" EntityType="Self.BS_H" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BS_M" EntityType="Self.BS_M" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BS_TOT" EntityType="Self.BS_TOT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_H" EntityType="Self.T_H" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_M" EntityType="Self.T_M" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_TOT" EntityType="Self.T_TOT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Temp_Tommy_Keuken" EntityType="Self.Temp_Tommy_Keuken" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Temp1" EntityType="Self.Temp1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Temp2" EntityType="Self.Temp2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Temp3" EntityType="Self.Temp3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TempB" EntityType="Self.TempB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parameters" EntityType="Self.Parameters" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Parameters].[key] AS [key], 
+    [Parameters].[value] AS [value]
+    FROM [dbo].[Parameters] AS [Parameters]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CVLoggerModelStoreContainer" CdmEntityContainer="CVLoggerEntities">
+    <EntitySetMapping Name="BS_H">
+      <EntityTypeMapping TypeName="CVLoggerModel.BS_H">
+        <MappingFragment StoreEntitySet="BS_H">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BS_M">
+      <EntityTypeMapping TypeName="CVLoggerModel.BS_M">
+        <MappingFragment StoreEntitySet="BS_M">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BS_TOT">
+      <EntityTypeMapping TypeName="CVLoggerModel.BS_TOT">
+        <MappingFragment StoreEntitySet="BS_TOT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_H">
+      <EntityTypeMapping TypeName="CVLoggerModel.T_H">
+        <MappingFragment StoreEntitySet="T_H">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_M">
+      <EntityTypeMapping TypeName="CVLoggerModel.T_M">
+        <MappingFragment StoreEntitySet="T_M">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_TOT">
+      <EntityTypeMapping TypeName="CVLoggerModel.T_TOT">
+        <MappingFragment StoreEntitySet="T_TOT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="TempCounter" ColumnName="TempCounter" />
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Temp_Tommy_Keuken">
+      <EntityTypeMapping TypeName="CVLoggerModel.Temp_Tommy_Keuken">
+        <MappingFragment StoreEntitySet="Temp_Tommy_Keuken">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Temp1">
+      <EntityTypeMapping TypeName="CVLoggerModel.Temp1">
+        <MappingFragment StoreEntitySet="Temp1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Temp2">
+      <EntityTypeMapping TypeName="CVLoggerModel.Temp2">
+        <MappingFragment StoreEntitySet="Temp2">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Temp3">
+      <EntityTypeMapping TypeName="CVLoggerModel.Temp3">
+        <MappingFragment StoreEntitySet="Temp3">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempB">
+      <EntityTypeMapping TypeName="CVLoggerModel.TempB">
+        <MappingFragment StoreEntitySet="TempB">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parameters">
+      <EntityTypeMapping TypeName="CVLoggerModel.Parameters">
+        <MappingFragment StoreEntitySet="Parameters">
+          <ScalarProperty Name="key" ColumnName="key" />
+          <ScalarProperty Name="value" ColumnName="value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
