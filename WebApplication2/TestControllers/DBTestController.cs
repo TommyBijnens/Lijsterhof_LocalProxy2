@@ -8,19 +8,22 @@ using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
-    public class DBController : ApiController
+    public class DBTestController : ApiController
     {
+
         // GET: api/DB
-        public IEnumerable<ExportParameter> Get()
+        public HttpResponseMessage Get()//List<CVParameter>
         {
-            return DB.GetParameters();
+            return HTMLInfo.CreateResponse("DB", DB.GetParameters());
         }
 
         // GET: api/DB/5
-        public ExportParameter Get(string id)
+        public HttpResponseMessage Get(string id)
         {
-            return DB.GetParameter(id);
+            return HTMLInfo.CreateResponse("DB - " + id, DB.GetParameter(id));
         }
+
+
 
         // POST: api/DB
         public void Post([FromBody]string value)
@@ -28,9 +31,8 @@ namespace WebApplication2.Controllers
         }
 
         // PUT: api/DB/5
-        public void Put(string id, [FromBody]float value)
+        public void Put(int id, [FromBody]string value)
         {
-            DB.SetParameter(id, value);
         }
 
         // DELETE: api/DB/5
@@ -39,7 +41,9 @@ namespace WebApplication2.Controllers
         }
 
 
-        
+
     }
+
+
    
 }

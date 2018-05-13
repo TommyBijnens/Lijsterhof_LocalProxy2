@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
@@ -19,7 +20,7 @@ namespace WebApplication2.Models
         private static void Connect()
         {
             clientSocket = new TcpClient();
-            string IP = "192.168.0.180";
+            string IP = ConfigurationManager.AppSettings["NHCAddress"];
             int port = 8000;
             clientSocket.Connect(IP, port);
             serverStream = clientSocket.GetStream();

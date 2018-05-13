@@ -9,7 +9,7 @@ namespace WebApplication2.Models.General
 {
     public static class WebService
     {
-        public static float getFromWebService(string url)
+        public static string getFromWebService(string url)
         {
             string result = string.Empty;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
@@ -20,7 +20,7 @@ namespace WebApplication2.Models.General
             {
                 result = reader.ReadToEnd();
             }
-            return float.Parse(result);
+            return result;
         }
 
 

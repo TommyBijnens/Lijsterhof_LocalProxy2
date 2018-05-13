@@ -24,8 +24,45 @@ namespace WebApplication2
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new {id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+            name: "TestCV",
+            routeTemplate: "test/CV/{id}",
+            defaults: new { controller = "CVTest", id = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
+            name: "TestDB",
+            routeTemplate: "test/DB/{id}",
+            defaults: new { controller = "DBTest", id = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
+            name: "TestNHC",
+            routeTemplate: "test/NHC/{id}",
+            defaults: new { controller = "NHCTest", id = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
+            name: "TestRPI",
+            routeTemplate: "test/RPI/{id}",
+            defaults: new { controller = "RPITest", id = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
+            name: "TestEXT",
+            routeTemplate: "test/EXT/{id}",
+            defaults: new { controller = "EXTTest", id = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
+            name: "TestLOG",
+            routeTemplate: "test/LOG/{id}",
+            defaults: new { controller = "LOGTest", id = RouteParameter.Optional }
+            );
+
 
             //Format respsonse as JSON
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));

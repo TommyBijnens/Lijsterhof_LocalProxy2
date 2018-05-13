@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\ex03193\source\repos\WebApplication2\WebApplication2\EntityDataModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Projecten\Lijsterhof_LocalProxy2\WebApplication2\EntityDataModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

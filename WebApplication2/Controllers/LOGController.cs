@@ -8,42 +8,33 @@ using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
-    public class DBTestController : ApiController
+    public class LOGController : ApiController
     {
-
-        // GET: api/DB
-        public HttpResponseMessage Get()//List<CVParameter>
+        // GET: api/LOG
+        public IEnumerable<ExportParameter> Get()
         {
-            return HTMLInfo.CreateResponse("DB", DB.GetList());
+            return DB.GetLogs();
         }
 
-        // GET: api/DB/5
-        public HttpResponseMessage Get(string id)
+        // GET: api/LOG/5
+        public LOGParameter Get(string id)
         {
-            return HTMLInfo.CreateResponse("DB - " + id, DB.GetParameter(id));
+            return DB.GetLog(id);
         }
 
-
-
-        // POST: api/DB
+        // POST: api/LOG
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT: api/DB/5
+        // PUT: api/LOG/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE: api/DB/5
+        // DELETE: api/LOG/5
         public void Delete(int id)
         {
         }
-
-
-
     }
-
-
-   
 }

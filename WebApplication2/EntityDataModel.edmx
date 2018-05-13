@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CVLoggerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CVLoggerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BS_H">
           <Key>
             <PropertyRef Name="ID" />
@@ -32,8 +32,6 @@
           <Property Name="TempCounter" Type="int" />
           <Property Name="Counter" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'CVLogger.dbo.Parameters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Parameters">
           <Key>
             <PropertyRef Name="key" />
@@ -112,6 +110,7 @@ warning 6002: The table/view 'CVLogger.dbo.Parameters' does not have a primary k
           <EntitySet Name="BS_H" EntityType="Self.BS_H" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BS_M" EntityType="Self.BS_M" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BS_TOT" EntityType="Self.BS_TOT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Parameters" EntityType="Self.Parameters" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_H" EntityType="Self.T_H" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_M" EntityType="Self.T_M" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_TOT" EntityType="Self.T_TOT" Schema="dbo" store:Type="Tables" />
@@ -120,15 +119,8 @@ warning 6002: The table/view 'CVLogger.dbo.Parameters' does not have a primary k
           <EntitySet Name="Temp2" EntityType="Self.Temp2" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Temp3" EntityType="Self.Temp3" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TempB" EntityType="Self.TempB" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Parameters" EntityType="Self.Parameters" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Parameters].[key] AS [key], 
-    [Parameters].[value] AS [value]
-    FROM [dbo].[Parameters] AS [Parameters]</DefiningQuery>
-          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CVLoggerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

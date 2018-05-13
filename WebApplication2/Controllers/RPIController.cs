@@ -8,38 +8,34 @@ using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
-    public class DBController : ApiController
+    public class RPIController : ApiController
     {
-        // GET: api/DB
+        // GET: api/RPI
         public IEnumerable<ExportParameter> Get()
         {
-            return DB.GetParameters();
+            return RPI.GetList();
         }
 
-        // GET: api/DB/5
+        // GET: api/RPI/5
         public ExportParameter Get(string id)
         {
-            return DB.GetParameter(id);
+            return RPI.GetParameter(id);
         }
 
-        // POST: api/DB
+
+        // POST: api/RPI
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT: api/DB/5
-        public void Put(string id, [FromBody]float value)
+        // PUT: api/RPI/5
+        public void Put(int id, [FromBody]string value)
         {
-            DB.SetParameter(id, value);
         }
 
-        // DELETE: api/DB/5
+        // DELETE: api/RPI/5
         public void Delete(int id)
         {
         }
-
-
-        
     }
-   
 }

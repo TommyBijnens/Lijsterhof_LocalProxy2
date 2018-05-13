@@ -200,13 +200,28 @@
       <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\CVController.cs" />
-    <Compile Include="Controllers\CVTestController.cs" />
+    <Compile Include="Controllers\LOGController.cs" />
+    <Compile Include="Models\CV\CVParameterService.cs" />
+    <Compile Include="Models\EXT\EXTParameterService.cs" />
+    <Compile Include="Models\EXT\Weather.cs" />
+    <Compile Include="Models\LOG\LOGParameter.cs" />
+    <Compile Include="Models\RPI\RPIParameterService.cs" />
+    <Compile Include="TestControllers\CVTestController.cs" />
     <Compile Include="Controllers\DBController.cs" />
-    <Compile Include="Controllers\DBTestController.cs" />
+    <Compile Include="TestControllers\DBTestController.cs" />
+    <Compile Include="Controllers\EXTController.cs" />
+    <Compile Include="TestControllers\EXTTestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RPIController.cs" />
+    <Compile Include="TestControllers\LOGTestController.cs" />
+    <Compile Include="TestControllers\RPITestController.cs" />
+    <Compile Include="Models\EXT\EXT.cs" />
+    <Compile Include="Models\EXT\EXTParameter.cs" />
+    <Compile Include="Models\RPI\RPI.cs" />
+    <Compile Include="Models\RPI\RPIParameter.cs" />
     <Compile Include="Views\HTMLInfo.cs" />
     <Compile Include="Controllers\NHCController.cs" />
-    <Compile Include="Controllers\NHCTestController.cs" />
+    <Compile Include="TestControllers\NHCTestController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="EntityDataModel.Context.cs">
       <AutoGen>True</AutoGen>

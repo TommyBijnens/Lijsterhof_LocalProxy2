@@ -8,38 +8,33 @@ using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
-    public class DBController : ApiController
+    public class EXTController : ApiController
     {
-        // GET: api/DB
-        public IEnumerable<ExportParameter> Get()
+        // GET: api/EXT
+        public IEnumerable<ExportParameter> Get()//List<CVParameter>
         {
-            return DB.GetParameters();
+            return EXT.GetList();
         }
 
-        // GET: api/DB/5
+        // GET: api/EXT/5
         public ExportParameter Get(string id)
         {
-            return DB.GetParameter(id);
+            return EXT.GetParameter(id);
         }
 
-        // POST: api/DB
+        // POST: api/EXT
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT: api/DB/5
-        public void Put(string id, [FromBody]float value)
+        // PUT: api/EXT/5
+        public void Put(int id, [FromBody]string value)
         {
-            DB.SetParameter(id, value);
         }
 
-        // DELETE: api/DB/5
+        // DELETE: api/EXT/5
         public void Delete(int id)
         {
         }
-
-
-        
     }
-   
 }
